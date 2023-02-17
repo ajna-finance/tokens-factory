@@ -13,6 +13,6 @@ install :; git submodule update --init --recursive
 # Builds
 build   :; forge clean && forge build
 
-deploy-test-token-factory:
+deploy:
 	forge script script/DeployTokensFactory.s.sol:DeployTokensFactory \
 		--rpc-url ${ETH_RPC_URL} --sender ${DEPLOY_ADDRESS} --keystore ${DEPLOY_KEY} --broadcast --verify -vvv
